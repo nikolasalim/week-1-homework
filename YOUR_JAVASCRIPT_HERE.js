@@ -21,7 +21,9 @@ const rest = person => {
     person.health = 10;
     displayingStats(hero);
   } else {
-    alert(`${person.name}, your health is already full`);
+    !person.name
+      ? alert(`Your health is already full`)
+      : alert(`${person.name}, your health is already full`);
   }
   return person;
 };
@@ -222,7 +224,7 @@ resetScoreboardBtn.addEventListener("click", e => {
 
 pickFightBtn.addEventListener("click", e => {
   pickFight(hero);
-  document.getElementById("CPUBox").style.display = "block";
+  document.getElementById("CPUBox").style.display = "flex";
 });
 
 /* I COULDN'T MAKE THIS FEATURE WORK IN TIME :-(
