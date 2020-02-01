@@ -1,29 +1,84 @@
 <html>
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Mocha Tests</title>
     <link href="lib/mocha.css" rel="stylesheet" />
-</head>
-<body>
+    <link href="./style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="playersBox">
+      <div id="youBox">
+        <h1>YOUR STATS:</h1>
+        <div class="playerStats">
+          <h3 id="displayedName">Name:</h3>
+          <h3 id="displayedHealth">HP:</h3>
+          <h3 id="displayedWeapon">Weapon:</h3>
+        </div>
+      </div>
 
+      <div id="CPUBox">
+        <h1>CPU:</h1>
+        <div class="enemyStats">
+          <h3 id="enemyName">Name:</h3>
+          <h3 id="enemyHealth">HP:</h3>
+          <h3 id="enemyWeapon">Weapon:</h3>
+        </div>
+      </div>
+    </div>
+    <div class="mainButtons">
+      <img src="./media/rest.png" alt="rest" id="inn" />
+      <img src="./media/dagger.png" alt="dagger" id="dagger" />
+      <img src="./media/bag.png" alt="bag" id="bag" />
+    </div>
 
-  <!-- 👍 YOUR HTML HERE 👍 -->
+    <div class="form">
+      <form onsubmit="submitName(); return false">
+        <label for="name">Wanna change your character's name?</label>
+        <input type="text" id="nameInput" />
+        <button type="button" id="nameBtn">Change name</button>
+      </form>
+    </div>
+    <div class="pickFightBox">
+      <!-- <button id="reactionTest">Mode 2: REACTION SPEED TEST</button> -->
 
+      <div class="scoreboardBox">
+        <div class="scoreboard">
+          <table>
+            <tr>
+              <td>YOU</td>
+              <td>CPU</td>
+            </tr>
+            <tr>
+              <td id="youPoints">0</td>
+              <td id="CPUPoints">0</td>
+            </tr>
+          </table>
 
+          <button id="resetScoreboard">Reset Scoreboard</button>
+        </div>
+      </div>
+      <img src="media/fight.png" id="pickFight" />
+      <div class="messageBox">
+        <p id="message"></p>
+      </div>
+    </div>
 
-  <!-- I RECOMMEND YOU LEAVE THE REST UNTOUCHED -->
-  <button onclick="mocha.checkLeaks(); mocha.run();">Run the tests!</button>
+    <!-- I RECOMMEND YOU LEAVE THE REST UNTOUCHED -->
+    <button id="runTestBtn" onclick="mocha.checkLeaks(); mocha.run();">
+      Run the tests!
+    </button>
 
-  <div id="mocha">
-  <!-- MOCHA TEST FEEDBACK WILL BE RENDERED HERE -->
-  </div>
+    <div id="mocha">
+      <!-- MOCHA TEST FEEDBACK WILL BE RENDERED HERE -->
+    </div>
 
-  <script src="lib/chai.js"></script>
-  <script src="lib/mocha.js"></script>
-  <script src="lib/sinon.js"></script>
-  <script>mocha.setup('bdd')</script>
-  <script src="YOUR_JAVASCRIPT_HERE.js"></script>
-  <script src="lib/game_logic.test.js"></script>
-
-</body>
+    <script src="lib/chai.js"></script>
+    <script src="lib/mocha.js"></script>
+    <script src="lib/sinon.js"></script>
+    <script>
+      mocha.setup("bdd");
+    </script>
+    <script src="YOUR_JAVASCRIPT_HERE.js"></script>
+    <script src="lib/game_logic.test.js"></script>
+  </body>
 </html>

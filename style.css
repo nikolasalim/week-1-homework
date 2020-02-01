@@ -1,0 +1,144 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.playersBox,
+.mainButtons,
+.form,
+.pickFightBox,
+.scoreboardBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#youBox,
+#CPUBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0px;
+  margin: 30px 20px 0px 20px;
+}
+
+#CPUBox {
+  display: none;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: lightgray;
+  width: 300px;
+  border-radius: 10px;
+}
+
+label,
+input,
+button {
+  margin: 5px;
+}
+
+button {
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+input {
+  height: 20px;
+}
+
+label {
+  font-size: 14px;
+}
+
+.playerStats,
+.enemyStats {
+  color: blue;
+  /* background-color: blue; */
+  border: 2px solid blue;
+  border-radius: 10px;
+  width: 300px;
+  min-height: 120px;
+  height: fit-content;
+  padding: 20px;
+  margin: 5px 20px 0px 20px;
+}
+
+#inn,
+#dagger,
+#bag {
+  width: 150px;
+  height: 150px;
+  padding: 20 20px;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+.pickFightBox {
+  margin: 0px;
+}
+
+#pickFight {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.pickFightBox p,
+#message {
+  margin: 0px 50px;
+}
+
+.scoreboard,
+#pickFight,
+.messageBox {
+  margin: 20px;
+}
+
+#message {
+  font-size: 12px;
+  width: auto;
+}
+
+.messageBox {
+  background-color: rgb(235, 235, 235);
+  width: 200px;
+  height: fit-content;
+}
+
+.scoreboard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 200px;
+}
+
+td {
+  padding: 0px 10px;
+}
+
+#resetScoreboard {
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+#runTestBtn {
+  border: 1px solid black;
+  cursor: pointer;
+}
